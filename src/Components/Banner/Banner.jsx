@@ -24,7 +24,7 @@ const Banner = () => {
   return (
     <div className="w-full  bg-gradient-to-r from-black/20 via-black/5 to-black/20 banner mx-auto  ">
       <div className=" w-full ">
-        <div className="w-full relative h-full bannerVideo-container ">
+        <div className="w-full relative h-full  bannerVideo-container ">
           <video
             src={bannerVideo}
             autoPlay

@@ -11,7 +11,7 @@ const ExtraSection = () => {
             className="image-design border-4 border-slate-400 intersection translate-y-32 opacity-0 duration-1000"
           />
         </div>
-        <div className="w-full px-7 mt-12  intersection -translate-y-32 opacity-0 duration-1000">
+        <div className="w-full px-7 mt-12  intersection translate-y-32 opacity-0 duration-1000">
           <h1 className="md:text-3xl text-2xl font-semibold uppercase">
             Find Your State Restaurant By Us
           </h1>
