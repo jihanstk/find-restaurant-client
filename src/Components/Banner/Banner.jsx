@@ -22,9 +22,9 @@ const Banner = () => {
     });
   }, []);
   return (
-    <div className="w-full  bg-gradient-to-r from-black/20 via-black/5 to-black/20 banner mx-auto ">
+    <div className="w-full  bg-gradient-to-r from-black/20 via-black/5 to-black/20 banner mx-auto  ">
       <div className=" w-full ">
-        <div className="w-full relative h-full ">
+        <div className="w-full relative h-full bannerVideo-container ">
           <video
             src={bannerVideo}
             autoPlay
@@ -41,8 +41,8 @@ const Banner = () => {
           ></video>
 
           <div className="w-full h-full text-center  absolute top-0 bg-[black]/60 flex justify-center items-center ">
-            <div className="intersection translate-x-96 opacity-0 duration-1000">
-              <h1 className="md:text-5xl text-2xl font-bold text-[#C5FFF8]">
+            <div className="intersection translate-y-32  opacity-0 duration-1000">
+              <h1 className="md:text-5xl text-3xl font-bold text-[#C5FFF8] px-4">
                 Find Your Desired Restaurant
               </h1>
               <p className="text-sm text-[#b8b8b8] md:w-2/3 w-11/12 mx-auto my-4">

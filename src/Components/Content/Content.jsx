@@ -25,6 +25,18 @@ const Content = () => {
   useEffect(() => {
     fetchData();
   }, []);
+  if (restaurants.length === 0) {
+    return (
+      <div className="flex justify-center items-center h-[80vh]">
+        <div>
+          <span className="loading loading-ball loading-xs"></span>
+          <span className="loading loading-ball loading-sm"></span>
+          <span className="loading loading-ball loading-md"></span>
+          <span className="loading loading-ball loading-lg"></span>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="my-28 text-center w-11/12 mx-auto">
       <div className="my-10">
