@@ -6,7 +6,9 @@ const Content = () => {
   const [locations, setLocations] = useState([]);
   const [restaurants, setRestaurants] = useState([]);
   const fetchData = async () => {
-    const response = await fetch("http://localhost:5179/restaurant");
+    const response = await fetch(
+      "https://find-restaurant-server.vercel.app/restaurant"
+    );
     const data = await response.json();
 
     const uniqueLocations = [];
