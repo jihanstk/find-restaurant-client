@@ -52,6 +52,9 @@ body{
     color: #C5FFF8;
     border-radius: 5px 5px 0 0;
 }
+.image-design{
+  border-radius: 70px 10px 70px 10px;
+}
 @media screen and (max-width:1075px){
   .tab-list{
     grid-template-columns: repeat(3,1fr);

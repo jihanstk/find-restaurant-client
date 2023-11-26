@@ -5,11 +5,9 @@ import SingleTabPanel from "./SingleTabPanel";
 const Content = () => {
   const [locations, setLocations] = useState([]);
   const [restaurants, setRestaurants] = useState([]);
-
   const fetchData = async () => {
     const response = await fetch("http://localhost:5179/restaurant");
     const data = await response.json();
-    console.log(data);
 
     const uniqueLocations = [];
 
@@ -18,22 +16,15 @@ const Content = () => {
         uniqueLocations.push(place.state);
       }
     });
-
     setLocations(uniqueLocations);
     setRestaurants(data);
-    // console.log(uniqueLocations);
-
-    // setLocations(data);
   };
 
   useEffect(() => {
-    // fetch("https://nextjs-orpin-omega-98.vercel.app/api/restaurants")
-    //   .then((res) => res.json())
-    //   .then((data) => console.log(data));
     fetchData();
   }, []);
   return (
-    <div className="my-24 text-center w-11/12 mx-auto">
+    <div className="my-28 text-center w-11/12 mx-auto">
       <div className="my-10">
         <h1 className="text-3xl font-bold uppercase">
           Here is your state restaurant

@@ -4,14 +4,19 @@ import bannerVideo from "../../assets/banner.mp4";
 const Banner = () => {
   useEffect(() => {
     const elements = document.querySelectorAll(".intersection");
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("intersection-show");
-          observer.unobserve(entry.target);
-        }
-      });
-    });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("intersection-show");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+      }
+    );
     elements.forEach((element) => {
       observer.observe(element);
     });
@@ -41,13 +46,14 @@ const Banner = () => {
           /> */}
           <div className="w-full h-full text-center  absolute top-0 bg-[black]/60 flex justify-center items-center ">
             <div className="intersection translate-x-96 opacity-0 duration-1000">
-              <h1 className="md:text-4xl text-2xl font-bold text-[#C5FFF8]">
+              <h1 className="md:text-5xl text-2xl font-bold text-[#C5FFF8]">
                 Find Your Desired Restaurant
               </h1>
-              <p className="text-sm text-[#C5FFF8] md:w-2/3 w-11/12 mx-auto my-4">
-                You can find your street food Restaurant, That help You to
-                choose better food. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Ratione, pariatur?
+              <p className="text-sm text-[#b8b8b8] md:w-2/3 w-11/12 mx-auto my-4">
+                🍽️ Discover & Share with Find Restaurant 🍲 Your Ultimate Dining
+                Companion! Explore, Share, and Enjoy - Bringing Friends
+                Together, One Bite at a Time. Download Now for a Seamless Dining
+                Experience! 📲 #FindRestaurant #DineTogether #FoodieAdventure
               </p>
               <button className="btn bg-[#0174BE] hover:bg-[#69a9fc] text-black">
                 Find Restaurant
