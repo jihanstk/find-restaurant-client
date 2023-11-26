@@ -55,6 +55,10 @@ body{
 .image-design{
   border-radius: 70px 10px 70px 10px;
 }
+.small-banner{
+  display: none;
+}
+
 @media screen and (max-width:1075px){
   .tab-list{
     grid-template-columns: repeat(3,1fr);
@@ -72,7 +76,18 @@ body{
     grid-template-columns: repeat(2,1fr);
     text-align: center;
   }
-}@media screen and (max-width:515px){
+}
+  @media screen and (max-width:475px){
+  
+  .banner-video{
+    display: none;
+  }
+  .small-banner{
+    display: block;
+
+  }
+}
+@media screen and (max-width:515px){
   .tab-list{
     grid-template-columns: repeat(1,1fr);
   }

@@ -24,26 +24,22 @@ const Banner = () => {
   return (
     <div className="w-full  bg-gradient-to-r from-black/20 via-black/5 to-black/20 banner mx-auto ">
       <div className=" w-full ">
-        <div className="w-full relative ">
+        <div className="w-full relative h-full ">
           <video
             src={bannerVideo}
             autoPlay
             loop
             muted
-            className=" w-full h-full md:block hidden"
+            className=" w-full h-full banner-video"
           ></video>
           <video
             src={bannerSmallVideo}
             autoPlay
             loop
             muted
-            className=" w-full h-full md:hidden block"
+            className=" w-full h-full small-banner"
           ></video>
-          {/* <img
-            src={bannerImage}
-            alt="Restaurant"
-            className="w-full intersection -translate-x-96 opacity-0 duration-1000"
-          /> */}
+
           <div className="w-full h-full text-center  absolute top-0 bg-[black]/60 flex justify-center items-center ">
             <div className="intersection translate-x-96 opacity-0 duration-1000">
               <h1 className="md:text-5xl text-2xl font-bold text-[#C5FFF8]">
