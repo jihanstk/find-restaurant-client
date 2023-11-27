@@ -8,6 +8,7 @@ const ExtraSection = () => {
           <img
             src={ExtraImage}
             alt="Extra Image"
+            loading="lazy"
             className="image-design border-4 border-slate-400 intersection translate-y-32 opacity-0 duration-1000"
           />
         </div>
