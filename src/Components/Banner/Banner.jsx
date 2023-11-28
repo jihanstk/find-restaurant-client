@@ -1,6 +1,9 @@
 import { useEffect } from "react";
 import bannerSmallVideo from "../../assets/banner-small.mp4";
 import bannerVideo from "../../assets/banner.mp4";
+import bannerFallback from "../../assets/bannerFallback.jpg";
+import smallBannerFallback from "../../assets/smallBannerFallback.jpg";
+
 const Banner = () => {
   useEffect(() => {
     const elements = document.querySelectorAll(".intersection");
@@ -26,18 +29,24 @@ const Banner = () => {
       <div className=" w-full ">
         <div className="w-full relative h-full  bannerVideo-container ">
           <video
-            src={bannerVideo}
             autoPlay
             loop
             muted
             className=" w-full h-full banner-video"
-          ></video>
+            poster={bannerFallback}
+          >
+            <source
+              src={bannerVideo}
+              type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
+            />
+          </video>
           <video
             src={bannerSmallVideo}
             autoPlay
             loop
             muted
             className=" w-full h-full small-banner"
+            poster={smallBannerFallback}
           ></video>
 
           <div className="w-full h-full text-center  absolute top-0 bg-[black]/60 flex justify-center items-center ">
